@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AppDynamics RUM Test Page</title>
+
+    <!-- AppDynamics RUM JavaScript -->
+    <script type="text/javascript">
+      (function(w,d,s,u){
+         w['adrum-start-time'] = new Date().getTime();
+         w['adrum-config'] = {
+           appKey: 'AD-AAB-ADZ-EU',  // Replace with full appKey if needed
+         };
+         var e=d.createElement(s),t=d.getElementsByTagName(s)[0];
+         e.async=true;e.src=u;t.parentNode.insertBefore(e,t);
+      })(window,document,'script','https://cdn.appdynamics.com/adrum/adrum-latest.js');
+    </script>
+
+  </head>
+  <body>
+    <h1>Hello! This page is monitored by AppDynamics RUM 🚀</h1>
+    <p>Open the browser, refresh this page a few times, and check AppDynamics for traffic.</p>
+  </body>
+</html>
