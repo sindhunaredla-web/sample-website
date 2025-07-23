@@ -4,16 +4,20 @@
     <title>AppDynamics RUM Test Page</title>
 
     <!-- AppDynamics RUM JavaScript -->
-    <script type="text/javascript">
-      (function(w,d,s,u){
-         w['adrum-start-time'] = new Date().getTime();
-         w['adrum-config'] = {
-           appKey: 'AD-AAB-ADZ-EXN',  // Replace with full appKey if needed
-         };
-         var e=d.createElement(s),t=d.getElementsByTagName(s)[0];
-         e.async=true;e.src=u;t.parentNode.insertBefore(e,t);
-      })(window,document,'script','https://cdn.appdynamics.com/adrum/adrum-latest.js');
-    </script>
+    <script charset="UTF-8" type="text/javascript">
+window["adrum-start-time"] = new Date().getTime();
+(function(config){
+    config.appKey = "AD-AAB-ADZ-EXN";
+    config.adrumExtUrlHttp = "http://cdn.appdynamics.com";
+    config.adrumExtUrlHttps = "https://cdn.appdynamics.com";
+    config.beaconUrlHttp = "http://pdx-col.eum-appdynamics.com";
+    config.beaconUrlHttps = "https://pdx-col.eum-appdynamics.com";
+    config.useHTTPSAlways = true;
+    config.resTiming = {"bufSize":200,"clearResTimingOnBeaconSend":true};
+    config.maxUrlLength = 512;
+})(window["adrum-config"] || (window["adrum-config"] = {}));
+</script>
+<script src="//cdn.appdynamics.com/adrum/adrum-24.4.0.4454.js"></script>
 
   </head>
   <body>
